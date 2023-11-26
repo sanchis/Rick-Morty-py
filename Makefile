@@ -1,6 +1,6 @@
 
 dev: setup
-	. venv/bin/activate &&watchfiles "python src/main.py"
+	. venv/bin/activate && watchfiles "python src/main.py"
 
 start: setup
 	. venv/bin/activate && python src/main.py
@@ -10,3 +10,6 @@ setup:
 
 venv: 
 	python3 -m venv venv
+
+lint: setup
+	. venv/bin/activate && mypy src/main.py

@@ -1,3 +1,4 @@
+from typing import Dict
 from rick_morty.character import Character
 from rick_morty.http_client import RickMortyClient
 from terminal_table import TerminalTable
@@ -8,10 +9,12 @@ class RickMortyGetOne:
         pass
 
     def get(self, id: str):
-        response = RickMortyClient.get_by_id(id)
-        if not response:
+        try:
+            response: Dict = RickMortyClient.get_by_id(id)
+            character = str(Character(response))
+            TerminalTable.print([character])
+
+        except Exception:
             return
 
-        character = str(Character(response))
-        TerminalTable.print([character])
         input("Pulsa cualquier letra para volver...")

@@ -1,6 +1,5 @@
 class Character:
     def __init__(self, character: dict) -> None:
-        self.__character = character
         self.__name = character.get("name")
         self.__id = character.get("id")
         self.__species = character.get("species")

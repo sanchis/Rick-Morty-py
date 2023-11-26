@@ -1,3 +1,6 @@
+from typing_extensions import TypedDict
+
+
 class TerminalTable:
     @staticmethod
     def print(elements: list[str]):
@@ -18,15 +21,18 @@ class TerminalTable:
     @staticmethod
     def __print_horizontal_frame(size: int, is_top=True) -> None:
         # Box Drawing https://symbl.cc/en/unicode/blocks/box-drawing/
-        edge = {
+        Edge = TypedDict("Edge", {"left": str, "right": str})
+        Frame = TypedDict("Frame", {"top": Edge, "bottom": Edge})
+
+        edge: Frame = {
             "top": {"left": "┏", "right": "┓"},
             "bottom": {"left": "┗", "right": "┛"},
         }
-        edgeOption = edge.get("top") if is_top else edge.get("bottom")
+        edgeOption: Edge = edge["top"] if is_top else edge["bottom"]
         print(
-            edgeOption.get("left")
+            edgeOption["left"]
             + "━" * TerminalTable.__calc_longitude_to_print(size)
-            + edgeOption.get("right")
+            + edgeOption["right"]
         )
 
     @staticmethod

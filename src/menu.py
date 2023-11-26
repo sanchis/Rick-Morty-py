@@ -1,4 +1,4 @@
-from typing import List
+from typing import Callable, List
 from alert import Alert
 
 from terminal import Terminal
@@ -6,7 +6,7 @@ from terminal_table import TerminalTable
 
 
 class MenuElement:
-    def __init__(self, name: str, fn: callable) -> None:
+    def __init__(self, name: str, fn: Callable) -> None:
         self.name = name
         self.fn = fn
 
@@ -31,7 +31,7 @@ class Menu:
         ):
             Terminal.clear()
             Alert.error("Opción incorrecta vuelva a intentarlo.")
-            self.print()
+            return self.print()
         else:
             option_selected = self.__menu_items[int(option) - 1]
             return option_selected
