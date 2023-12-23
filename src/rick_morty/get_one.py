@@ -1,7 +1,7 @@
 from typing import Dict
 from rick_morty.character import Character
 from rick_morty.http_client import RickMortyClient
-from terminal_table import TerminalTable
+from helpers.table.module import TerminalTable
 
 
 class RickMortyGetOne:

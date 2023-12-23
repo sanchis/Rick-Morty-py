@@ -1,8 +1,8 @@
 from typing import Callable, List
-from alert import Alert
+from helpers import Alert
 
-from terminal import Terminal
-from terminal_table import TerminalTable
+from helpers import Terminal
+from helpers import TerminalTable
 
 
 class MenuElement:

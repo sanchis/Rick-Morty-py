@@ -1,9 +1,8 @@
 from typing import Dict, Optional, Union
 import requests
-from urllib3.exceptions import InsecureRequestWarning, NewConnectionError
+from urllib3.exceptions import InsecureRequestWarning
 from urllib3 import disable_warnings
-from alert import Alert
-
+from helpers import Alert
 
 disable_warnings(InsecureRequestWarning)
 

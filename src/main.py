@@ -1,4 +1,4 @@
-from menu import Menu, MenuElement
+from helpers import Menu, MenuElement
 from rick_morty.get_list import RickyMortyList
 from rick_morty.get_one import RickMortyGetOne
 
