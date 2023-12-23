@@ -1,10 +1,6 @@
 from typing import Dict, Optional, Union
 import requests
-from urllib3.exceptions import InsecureRequestWarning
-from urllib3 import disable_warnings
-from helpers import Alert
-
-disable_warnings(InsecureRequestWarning)
+from rick_morty_py.helpers import Alert
 
 
 # https://rickandmortyapi.com/documentation

@@ -1,6 +1,6 @@
-from helpers import Menu, MenuElement
-from rick_morty.get_list import RickyMortyList
-from rick_morty.get_one import RickMortyGetOne
+from rick_morty_py.helpers import Menu, MenuElement
+from rick_morty_py.rick_morty.get_list import RickyMortyList
+from rick_morty_py.rick_morty.get_one import RickMortyGetOne
 
 
 class Main:
@@ -13,14 +13,14 @@ class Main:
     def __print_banner() -> None:
         print(
             """
-  _____  _      _               __  __            _         
- |  __ \(_)    | |      ___    |  \/  |          | |        
- | |__) |_  ___| | __  ( _ )   | \  / | ___  _ __| |_ _   _ 
- |  _  /| |/ __| |/ /  / _ \/\ | |\/| |/ _ \| '__| __| | | |
- | | \ \| | (__|   <  | (_>  < | |  | | (_) | |  | |_| |_| |
- |_|  \_\_|\___|_|\_\  \___/\/ |_|  |_|\___/|_|   \__|\__, |
-                                                       __/ |
-                                                      |___/  """
+      _____  _      _               __  __            _
+     |  __ \\(_)    | |      ___    |  \\/  |          | |
+     | |__) |_  ___| | __  ( _ )   | \\  / | ___  _ __| |_ _   _
+     |  _  /| |/ __| |/ /  / _ \\/\\ | |\\/| |/ _ \\| '__| __| | | |
+     | | \\ \\| | (__|   <  | (_>  < | |  | | (_) | |  | |_| |_| |
+     |_|  \\_\\_|\\___|_|\\_\\  \\___/\\/ |_|  |_|\\___/|_|   \\__|\\__, |
+                                                           __/ |
+                                                          |___/  """
         )
 
     @staticmethod

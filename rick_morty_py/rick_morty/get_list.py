@@ -1,8 +1,7 @@
 from typing import Any, Optional
-from helpers.menu import Menu, MenuElement
-from rick_morty.character import Character
-from rick_morty.http_client import RickMortyClient
-from helpers.table.module import TerminalTable
+from rick_morty_py.helpers import Menu, MenuElement, TerminalTable
+from .character import Character
+from .http_client import RickMortyClient
 
 
 class RickyMortyList:

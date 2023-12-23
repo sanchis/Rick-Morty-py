@@ -1,15 +1,12 @@
 
 dev: setup
-	. venv/bin/activate && watchfiles "python src/main.py"
+	poetry run watchfiles "python rick_morty_py/main.py"
 
 start: setup
-	. venv/bin/activate && python src/main.py
+	poetry run start
 
 setup: 
-	python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
-
-venv: 
-	python3 -m venv venv
+	poetry install
 
 lint: setup
-	. venv/bin/activate && mypy src/main.py
+	poetry run mypy rick_morty_py
