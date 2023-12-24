@@ -8,14 +8,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 requests = "^2.31.0"
-types-requests = "^2.31.0.10"
 
 [tool.poetry.scripts]
-mypy = "^1.8.0"
 start = "rick_morty_py.main:start"
 
 [tool.poetry.group.dev.dependencies]
 watchfiles = "^0.21.0"
+mypy = "^1.8.0"
+types-requests = "^2.31.0.10"
 
 [build-system]
 requires = ["poetry-core"]
